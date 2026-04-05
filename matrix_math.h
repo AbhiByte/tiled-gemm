@@ -9,6 +9,11 @@ std::vector<std::vector<int>> naiveMatrixMultiplication(
     const std::vector<std::vector<int>>& b, 
     int N);
 
+std::vector<std::vector<int>> tiledMatrixMultiplication(
+    const std::vector<std::vector<int>>& a, 
+    const std::vector<std::vector<int>>& b, 
+    int N, int T);
+
 
 double gflopsAchieved(int N, double ms);
 
