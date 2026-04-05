@@ -3,18 +3,19 @@
 
 #include <vector>
 
-// Just the signature/prototype
-std::vector<std::vector<int>> naiveMatrixMultiplication(
-    const std::vector<std::vector<int>>& a, 
-    const std::vector<std::vector<int>>& b, 
-    int N);
+// Row-major layout: element (i, j) is at index i * n + j.
 
-std::vector<std::vector<int>> tiledMatrixMultiplication(
-    const std::vector<std::vector<int>>& a, 
-    const std::vector<std::vector<int>>& b, 
-    int N, int T);
+std::vector<int> naiveMatrixMultiplication(
+    const std::vector<int>& a,
+    const std::vector<int>& b,
+    int n);
 
+std::vector<int> tiledMatrixMultiplication(
+    const std::vector<int>& a,
+    const std::vector<int>& b,
+    int n,
+    int tile);
 
-double gflopsAchieved(int N, double ms);
+double gflopsAchieved(float n, double ms);
 
 #endif
