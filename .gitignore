@@ -1,5 +1,8 @@
 build/
 
+# Default executable name when built in repo root (e.g. c++ -o main ...)
+/main
+
 # Prerequisites
 *.d
 
